@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 module "aws_organizations_policy" {
-  source  = "bodhikshakti/aws_organizations_policy/aws"
+  source  = "terraform-aws-modules/aws_organizations_policy/aws"
   version = "1.0.0"
   tags = {Environment = "production"
     }
@@ -13,5 +13,4 @@ module "aws_organizations_policy" {
   description = var.description
   type = var.type
 
-  tags = var.aws_organizations_policy_tags
 }
