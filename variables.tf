@@ -17,9 +17,3 @@ variable "type" {
   type        = list(string)
   default     = ["SERVICE_CONTROL_POLICY", "BACKUP_POLICY", "TAG_POLICY"]
 }
-
-variable "aws_organizations_policy_tags" {
-  description = "Policy tags"
-  type        = string
-  default     = "example-description"
-}
