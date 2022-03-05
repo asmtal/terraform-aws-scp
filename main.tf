@@ -1,19 +1,11 @@
-# Terraform configuration
-
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
+# AWS SCP Root deny all
 
 provider "aws" {
   region = "*"
 }
 
 module "aws_organizations_policy" {
-  source  = "terraform-aws-modules/aws_organizations_policy/aws"
+  source  = "bodhikshakti/aws_organizations_policy/aws"
   version = "1.0.0"
 
   name = var.policy_name
